@@ -1,0 +1,5 @@
+cd=/Users/mbrazeau/Projects/Morphy/test_matrices
+open=minjinia.nex
+addseq=random
+ratchet=yes
+heur
