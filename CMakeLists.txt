@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 
 # morphy nui version
-project(morphy_nui_v VERSION 0.1)
+project(morphy_nui_v VERSION 0.2)
 
 configure_file(morphyNUIConfig.h.in morphyNUIConfig.h)
 
-include_directories(${CMAKE_SOURCE_DIR}/../ncl ${CMAKE_SOURCE_DIR}/../mpl/include ${CMAKE_SOURCE_DIR}/build)
+include_directories(${CMAKE_SOURCE_DIR}/../external/ncl ${CMAKE_SOURCE_DIR}/../mpl/include ${CMAKE_SOURCE_DIR}/build)
 if(MSVC)
-	include_directories(${CMAKE_SOURCE_DIR}/../wineditline/include)
+	include_directories(${CMAKE_SOURCE_DIR}/../external/wineditline/include)
 endif()
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmakemodules")
@@ -60,8 +60,8 @@ endif()
 set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../install")
 
 if (MSVC)
-    add_subdirectory (${CMAKE_SOURCE_DIR}/../wineditline ${CMAKE_CURRENT_BINARY_DIR}/../wineditline)
+    add_subdirectory (${CMAKE_SOURCE_DIR}/../external/wineditline ${CMAKE_CURRENT_BINARY_DIR}/../external/wineditline)
 endif()
-add_subdirectory(${CMAKE_SOURCE_DIR}/../ncl ${CMAKE_CURRENT_BINARY_DIR}/ncl)
+add_subdirectory(${CMAKE_SOURCE_DIR}/../external/ncl ${CMAKE_CURRENT_BINARY_DIR}/external/ncl)
 add_subdirectory(${CMAKE_SOURCE_DIR}/../mpl ${CMAKE_CURRENT_BINARY_DIR}/mpl)
 add_subdirectory(${CMAKE_SOURCE_DIR}/../nui ${CMAKE_CURRENT_BINARY_DIR}/nui)
