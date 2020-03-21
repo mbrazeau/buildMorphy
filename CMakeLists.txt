@@ -5,7 +5,7 @@ project(morphy_nui_v VERSION 0.2)
 
 configure_file(morphyNUIConfig.h.in morphyNUIConfig.h)
 
-include_directories(${CMAKE_SOURCE_DIR}/../external/ncl ${CMAKE_SOURCE_DIR}/../mpl/include ${CMAKE_SOURCE_DIR}/build)
+include_directories(${CMAKE_SOURCE_DIR}/../external/ncl ${CMAKE_SOURCE_DIR}/../external/ncl/ncl ${CMAKE_SOURCE_DIR}/../mpl/include ${CMAKE_SOURCE_DIR}/build)
 if(MSVC)
 	include_directories(${CMAKE_SOURCE_DIR}/../external/wineditline/include)
 endif()
