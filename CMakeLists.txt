@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # morphy nui version
-project(morphy_nui_v VERSION 0.2)
+project(morphy_nui_v VERSION 0.3)
 
 configure_file(morphyNUIConfig.h.in morphyNUIConfig.h)
 
