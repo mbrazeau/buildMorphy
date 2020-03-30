@@ -36,7 +36,7 @@ if(MSVC)
 else()
   # Update if necessary
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -fPIC")
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fPIC")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wno-trigraphs -fPIC")
   if (BETA) 
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DBETA")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBETA")
