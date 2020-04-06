@@ -50,6 +50,8 @@ def cmakeBuildType(buildDebug):
 
 def cmakeBuildPosix(buildDebug, buildVerbose, buildJobs, buildCoverage, buildBeta):
     cmake = "cmake .. -DCMAKE_BUILD_TYPE=" + cmakeBuildType(buildDebug)
+    if (buildDebug == True):
+        cmake += " -DDEBUG=1"
     if (buildCoverage == True):
         cmake += " -DCOVERAGE=1"
     if (buildBeta == True):
