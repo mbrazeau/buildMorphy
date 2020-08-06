@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 # morphy nui version
 project(morphy_nui_v VERSION 0.3)
-
 configure_file(morphyNUIConfig.h.in morphyNUIConfig.h)
 
 include_directories(${CMAKE_SOURCE_DIR}/../external/ncl ${CMAKE_SOURCE_DIR}/../external/ncl/ncl ${CMAKE_SOURCE_DIR}/../mpl/include ${CMAKE_SOURCE_DIR}/build)
