@@ -11,7 +11,7 @@ endif()
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmakemodules")
 set(PATH_LIB_NCL "ncl_static")
-
+   
 # find libedit
 if (NOT MSVC)
     FIND_PACKAGE(libedit REQUIRED)
